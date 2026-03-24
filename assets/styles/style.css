@@ -1,18 +1,19 @@
+/* general */
+
 * {
   box-sizing: border-box;
 }
 
 :root {
   --header-height: 450px;
-  --card-width: 275px;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1em;
   line-height: 1.5;
-  color: white;
   text-align: center;
+  color: #fff;
   background-color: #333;
 }
 
@@ -43,9 +44,9 @@ h3 {
 }
 
 .header-content {
+  max-width: 900px;
   height: var(--header-height);
   margin: auto;
-  max-width: 900px;
   padding: 90px 0;
 }
 
@@ -59,49 +60,37 @@ header p {
 }
 
 header a {
+  margin: 100px;
+  padding: 1.1em 2em;
   color: #fff;
   background-color: #333;
   border: #666 1px solid;
-  padding: 1.1em 2em;
-  margin: 100px;
 }
 
 header a:hover {
-  background-color: #eaeaea;
   color: #333;
+  background-color: #eaeaea;
 }
 
 /* main */
 
-h2 {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-h3 {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
 #section-a {
+  padding: 0.5em 1em 2.5em;
+  color: #333;
   background-color: #eaeaea;
-  color: black;
-  padding: 0.5em 0 2.5em;
-  display: flex;
-  justify-content: center;
 }
 
-.content {
+.a-content {
+  margin: auto;
   max-width: 850px;
 }
 
-.content * {
-  color: #333;
+.a-content * {
   padding: 0.6em 0;
 }
 
-.content p {
+.a-content p {
   column-count: 2;
-  column-width: 400px;
 }
 
 #section-b {
@@ -109,15 +98,19 @@ h3 {
   justify-content: center;
   padding: 2em;
   gap: 1em;
-  color: black;
 }
 
 .card {
-  width: var(--card-width);
-  background-color: white;
+  flex: 1;
+  max-width: 275px;
+  background-color: #fff;
 }
 
-.card-container {
+img {
+  width: 100%;
+}
+
+.card-content {
   padding: 1.5em;
 }
 
@@ -127,19 +120,19 @@ h3 {
   padding: 0.9em 0;
 }
 
-img {
-  width: var(--card-width);
-}
-
 #section-c {
+  padding: 1em;
+  color: #333;
   background-color: white;
-  color: black;
-  padding: 2em 30em;
 }
 
 #section-c * {
-  color: #333;
   padding: 1em 0;
+}
+
+.c-content {
+  margin: auto;
+  max-width: 850px;
 }
 
 #section-d {
@@ -147,8 +140,8 @@ img {
 }
 
 #section-d > div {
-  width: calc(100% / 2);
   padding: 2em 1em;
+  width: calc(100% / 2);
 }
 
 #section-d > div:first-child {
@@ -163,8 +156,8 @@ img {
 
 footer {
   display: flex;
-  background-color: black;
   padding: 2em 0;
+  background-color: #000;
 }
 
 footer > p {
@@ -173,4 +166,38 @@ footer > p {
 
 footer a {
   color: #2690d4;
+}
+
+/* adaptability */
+
+@media (max-width: 700px) {
+  .a-content p {
+    column-count: 1;
+  }
+
+  #section-b {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  #section-d {
+    flex-direction: column;
+  }
+
+  #section-d > div {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  footer > p {
+    width: 100%;
+  }
 }
