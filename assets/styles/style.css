@@ -2,23 +2,115 @@
   box-sizing: border-box;
 }
 
+:root {
+  --card-width: 275px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5;
   color: white;
   text-align: center;
+  background-color: #333;
 }
 
 /* header */
 
 /* main */
 
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#section-a {
+  background-color: #eaeaea;
+  color: black;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: 850px;
+}
+
+.content * {
+  color: #333;
+  padding: 0.5em 0;
+}
+
+.content p {
+  column-count: 2;
+  column-width: 400px;
+}
+
+#section-b {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  gap: 1em;
+  color: black;
+}
+
+.card {
+  width: var(--card-width);
+  background-color: white;
+}
+
+.card-container {
+  padding: 1.5em;
+}
+
+.card h3,
+.card p {
+  color: #333;
+  padding: 0.9em 0;
+}
+
+img {
+  width: var(--card-width);
+}
+
+#section-c {
+  background-color: white;
+  color: black;
+  padding: 2em 30em;
+}
+
+#section-c * {
+  color: #333;
+  padding: 1em 0;
+}
+
+#section-d {
+  display: flex;
+}
+
+#section-d > div {
+  width: calc(100% / 2);
+  padding: 2em 1em;
+}
+
+#section-d > div:first-child {
+  background-color: #2690d4;
+}
+
+#section-d div * {
+  padding: 1em;
+}
+
 /* footer */
 
 footer {
   display: flex;
   background-color: black;
-  font-size: 1.1em;
-  padding: 40px 0;
+  padding: 2em 0;
 }
 
 footer > p {
@@ -26,5 +118,5 @@ footer > p {
 }
 
 footer a {
-  color: #198ed4;
+  color: #2690d4;
 }
