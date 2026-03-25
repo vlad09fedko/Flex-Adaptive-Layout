@@ -74,7 +74,7 @@ header a:hover {
 
 /* main */
 
-#section-a {
+.section-a {
   padding: 0.5em 1em 2.5em;
   color: #333;
   background-color: #eaeaea;
@@ -93,7 +93,7 @@ header a:hover {
   column-count: 2;
 }
 
-#section-b {
+.section-b {
   display: flex;
   justify-content: center;
   padding: 2em;
@@ -120,13 +120,13 @@ img {
   padding: 0.9em 0;
 }
 
-#section-c {
+.section-c {
   padding: 1em;
   color: #333;
   background-color: white;
 }
 
-#section-c * {
+.section-c * {
   padding: 1em 0;
 }
 
@@ -135,20 +135,20 @@ img {
   max-width: 850px;
 }
 
-#section-d {
+.section-d {
   display: flex;
 }
 
-#section-d > div {
+.section-d > div {
   padding: 2em 1em;
   width: calc(100% / 2);
 }
 
-#section-d > div:first-child {
+.section-d > div:first-child {
   background-color: #2690d4;
 }
 
-#section-d div * {
+.section-d div * {
   padding: 1em;
 }
 
@@ -175,7 +175,7 @@ footer a {
     column-count: 1;
   }
 
-  #section-b {
+  .section-b {
     flex-direction: column;
     align-items: center;
   }
@@ -184,11 +184,11 @@ footer a {
     max-width: 90%;
   }
 
-  #section-d {
+  .section-d {
     flex-direction: column;
   }
 
-  #section-d > div {
+  .section-d > div {
     width: 100%;
   }
 
